@@ -83,8 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
-
+    'locale' => env('APP_LOCALE', 'en'),
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -96,8 +95,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
-
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
     /*
     |--------------------------------------------------------------------------
     | Faker Locale
@@ -168,6 +166,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\VoltServiceProvider::class,
     ])->toArray(),
 
     /*
